@@ -25,7 +25,7 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id="services"
-      className="w-full bg-[#0D0D0D] text-white rounded-t-[40px] sm:rounded-t-[60px] pt-12 sm:pt-20 pb-16 px-4 sm:px-8 relative overflow-hidden border-t border-white/10"
+      className="w-full bg-dark-bg text-white rounded-t-[40px] sm:rounded-t-[60px] pt-12 sm:pt-20 pb-16 px-4 sm:px-8 relative overflow-hidden border-t border-white/10"
     >
       {/* Layer 1: Dark Pattern Background Image */}
       <div className="absolute inset-0 pointer-events-none opacity-95">
@@ -50,13 +50,13 @@ export const ServicesSection: React.FC = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[1200px] mx-auto flex flex-col gap-10">
+      <div className="relative z-10 max-w-300 mx-auto flex flex-col gap-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
             My <span className="text-accent-orange">Services</span>
           </h2>
-          <p className="max-w-[460px] text-sm sm:text-base text-white/80 leading-relaxed font-normal">
+          <p className="max-w-115 text-sm sm:text-base text-white/80 leading-relaxed font-normal">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus
             nunc, posuere in justo vulputate, bibendum sodales
           </p>

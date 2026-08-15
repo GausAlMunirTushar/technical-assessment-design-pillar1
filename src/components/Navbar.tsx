@@ -28,10 +28,10 @@ export const Navbar: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="w-full max-w-[1440px] mx-auto px-4 pt-6 pb-4 flex justify-center sticky top-0 z-40">
+		<header className="w-full max-w-360 mx-auto px-4 pt-6 pb-4 flex justify-center sticky top-0 z-40">
 			{/* Desktop Navbar */}
 			<nav
-				className="hidden md:grid grid-cols-3 items-center w-full max-w-[960px] bg-dark-surface text-white rounded-full px-4 py-2.5 shadow-lg border border-white/10"
+				className="hidden md:grid grid-cols-3 items-center w-full max-w-240 bg-dark-surface text-white rounded-full px-4 py-2.5 shadow-lg border border-white/10"
 				aria-label="Desktop navigation"
 			>
 				{/* Left items */}
@@ -79,7 +79,7 @@ export const Navbar: React.FC = () => {
 			</nav>
 
 			{/* Mobile Navbar Pill (Closed state) */}
-			<div className="flex md:hidden items-center justify-between w-full max-w-[345px] bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
+			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
 				<a href="#home">
 					<JcLogo />
 				</a>

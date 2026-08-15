@@ -28,7 +28,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       onClick={onClose}
     >
       <div
-        className="w-full max-w-[350px] bg-dark-surface text-white rounded-[32px] p-5 shadow-2xl flex flex-col gap-6 animate-in fade-in zoom-in-95 duration-200"
+        className="w-full max-w-87.5 bg-dark-surface text-white rounded-4xl p-5 shadow-2xl flex flex-col gap-6 animate-in fade-in zoom-in-95 duration-200"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"

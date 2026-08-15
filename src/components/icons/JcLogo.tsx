@@ -13,7 +13,7 @@ export const JcLogo: React.FC<JcLogoProps> = ({ className = "" }) => {
         alt="JC Monogram Logo"
         width={36}
         height={36}
-        className="w-9 h-9 flex-shrink-0"
+        className="w-9 h-9 shrink-0"
         priority
       />
       <span className="text-white font-extrabold tracking-wider text-base uppercase font-sans">

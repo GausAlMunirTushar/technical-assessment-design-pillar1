@@ -13,7 +13,7 @@ const navLinks = [
 export const Footer: React.FC = () => {
   return (
     <footer className="w-full bg-[#0A0A0A] text-white py-12 px-4 sm:px-8 border-t border-white/10">
-      <div className="max-w-[1200px] mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand Logo */}
         <a href="#home" className="hover:opacity-90 transition-opacity">
           <JcLogo />
