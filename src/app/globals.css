@@ -1,75 +1,97 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: var(--font-jakarta), system-ui, sans-serif;
+	--font-sans: var(--font-urbanist), system-ui, sans-serif;
 
-  --color-accent-orange: #FD853A;
-  --color-accent-orange-hover: #E47026;
+	--color-accent-orange: #fd853a;
+	--color-accent-orange-hover: #e47026;
 
-  --color-dark-surface: #171717;
-  --color-dark-bg: #0D0D0D;
-  --color-dark-card: rgba(255, 255, 255, 0.06);
+	--color-dark-surface: #171717;
+	--color-dark-bg: #0d0d0d;
+	--color-dark-card: rgba(255, 255, 255, 0.06);
 
-  --color-text-dark: #111111;
-  --color-text-muted: #666666;
+	--color-text-dark: #111111;
+	--color-text-muted: #666666;
 
-  --color-border-card: rgba(255, 255, 255, 0.12);
-  --color-border-light: rgba(0, 0, 0, 0.15);
+	--color-border-card: rgba(255, 255, 255, 0.12);
+	--color-border-light: rgba(0, 0, 0, 0.15);
 }
 
 :root {
-  --bg-main: #ffffff;
-  --fg-main: #111111;
-  --accent-orange: #FD853A;
-  --accent-orange-light: #FF9E67;
-  --surface-dark: #171717;
-  --services-bg: #0D0D0D;
-  --card-bg: rgba(255, 255, 255, 0.06);
-  --card-border: rgba(255, 255, 255, 0.12);
+	--bg-main: #ffffff;
+	--fg-main: #111111;
+	--accent-orange: #fd853a;
+	--accent-orange-light: #ff9e67;
+	--surface-dark: #171717;
+	--services-bg: #0d0d0d;
+	--card-bg: rgba(255, 255, 255, 0.06);
+	--card-border: rgba(255, 255, 255, 0.12);
 }
 
 html {
-  scroll-behavior: smooth;
-  color-scheme: light;
+	scroll-behavior: smooth;
+	color-scheme: light;
 }
 
 body {
-  background-color: var(--bg-main);
-  color: var(--fg-main);
-  font-family: var(--font-sans);
-  overflow-x: hidden;
+	background-color: var(--bg-main);
+	color: var(--fg-main);
+	font-family: var(--font-sans);
+	overflow-x: hidden;
 }
 
 /* Custom scrollbar for cards slider */
 .no-scrollbar::-webkit-scrollbar {
-  display: none;
+	display: none;
 }
 .no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
 }
 
 /* Responsive cutout mask for ServiceCard inner mockup container */
 .service-card-cutout {
-  /* Default mobile (< 640px): button is 56px (radius 28px), cutout radius 39px */
-  -webkit-mask-image: radial-gradient(circle 39px at calc(100% - 28px) calc(100% - 28px), transparent 38.5px, black 39px);
-  mask-image: radial-gradient(circle 39px at calc(100% - 28px) calc(100% - 28px), transparent 38.5px, black 39px);
+	/* Default mobile (< 640px): button is 56px (radius 28px), cutout radius 39px */
+	-webkit-mask-image: radial-gradient(
+		circle 39px at calc(100% - 28px) calc(100% - 28px),
+		transparent 38.5px,
+		black 39px
+	);
+	mask-image: radial-gradient(
+		circle 39px at calc(100% - 28px) calc(100% - 28px),
+		transparent 38.5px,
+		black 39px
+	);
 }
 
 @media (min-width: 640px) {
-  .service-card-cutout {
-    /* SM screens (640px - 767px): button is 64px (radius 32px), cutout radius 44px */
-    -webkit-mask-image: radial-gradient(circle 44px at calc(100% - 32px) calc(100% - 32px), transparent 43.5px, black 44px);
-    mask-image: radial-gradient(circle 44px at calc(100% - 32px) calc(100% - 32px), transparent 43.5px, black 44px);
-  }
+	.service-card-cutout {
+		/* SM screens (640px - 767px): button is 64px (radius 32px), cutout radius 44px */
+		-webkit-mask-image: radial-gradient(
+			circle 44px at calc(100% - 32px) calc(100% - 32px),
+			transparent 43.5px,
+			black 44px
+		);
+		mask-image: radial-gradient(
+			circle 44px at calc(100% - 32px) calc(100% - 32px),
+			transparent 43.5px,
+			black 44px
+		);
+	}
 }
 
 @media (min-width: 768px) {
-  .service-card-cutout {
-    /* MD+ screens (>= 768px): button is 68px (radius 34px), cutout radius 47px */
-    -webkit-mask-image: radial-gradient(circle 47px at calc(100% - 34px) calc(100% - 34px), transparent 46.5px, black 47px);
-    mask-image: radial-gradient(circle 47px at calc(100% - 34px) calc(100% - 34px), transparent 46.5px, black 47px);
-  }
+	.service-card-cutout {
+		/* MD+ screens (>= 768px): button is 68px (radius 34px), cutout radius 47px */
+		-webkit-mask-image: radial-gradient(
+			circle 47px at calc(100% - 34px) calc(100% - 34px),
+			transparent 46.5px,
+			black 47px
+		);
+		mask-image: radial-gradient(
+			circle 47px at calc(100% - 34px) calc(100% - 34px),
+			transparent 46.5px,
+			black 47px
+		);
+	}
 }
-
-
