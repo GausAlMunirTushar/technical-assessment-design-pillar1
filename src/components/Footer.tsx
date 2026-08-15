@@ -15,17 +15,24 @@ export const Footer: React.FC = () => {
     <footer className="w-full bg-[#0A0A0A] text-white py-12 px-4 sm:px-8 border-t border-white/10">
       <div className="max-w-300 mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Brand Logo */}
-        <a href="#home" className="hover:opacity-90 transition-opacity">
+        <a
+          href="#home"
+          className="hover:opacity-90 transition-opacity rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+          aria-label="JCREA Homepage"
+        >
           <JcLogo />
         </a>
 
         {/* Navigation Links */}
-        <nav className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80">
+        <nav
+          className="flex flex-wrap items-center justify-center gap-6 text-sm text-white/80"
+          aria-label="JCREA Footer Navigation"
+        >
           {navLinks.map((link) => (
             <a
               key={link.label}
               href={link.href}
-              className="hover:text-accent-orange transition-colors font-medium"
+              className="hover:text-accent-orange transition-colors font-medium rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
             >
               {link.label}
             </a>

@@ -25,13 +25,14 @@ export const ServicesSection: React.FC = () => {
   return (
     <section
       id="services"
+      aria-labelledby="services-heading"
       className="w-full bg-dark-bg text-white rounded-t-[40px] sm:rounded-t-[60px] pt-12 sm:pt-20 pb-16 px-4 sm:px-8 relative overflow-hidden border-t border-white/10"
     >
       {/* Layer 1: Dark Pattern Background Image */}
-      <div className="absolute inset-0 pointer-events-none opacity-95">
+      <div className="absolute inset-0 pointer-events-none opacity-95" aria-hidden="true">
         <Image
           src="/services-pattern-bg.jpg"
-          alt="Services dark pattern background"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -40,10 +41,10 @@ export const ServicesSection: React.FC = () => {
       </div>
 
       {/* Layer 2: Abstract Orange Fluid Overlay */}
-      <div className="absolute inset-0 pointer-events-none opacity-50 mix-blend-screen">
+      <div className="absolute inset-0 pointer-events-none opacity-50 mix-blend-screen" aria-hidden="true">
         <Image
           src="/services-bg.png"
-          alt="Abstract services background pattern"
+          alt=""
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -53,7 +54,10 @@ export const ServicesSection: React.FC = () => {
       <div className="relative z-10 max-w-300 mx-auto flex flex-col gap-10">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight">
+          <h2
+            id="services-heading"
+            className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight"
+          >
             My <span className="text-accent-orange">Services</span>
           </h2>
           <p className="max-w-115 text-sm sm:text-base text-white/80 leading-relaxed font-normal">

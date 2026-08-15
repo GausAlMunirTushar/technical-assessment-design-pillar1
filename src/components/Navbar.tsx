@@ -41,7 +41,7 @@ export const Navbar: React.FC = () => {
 							<a
 								key={item.label}
 								href={item.href}
-								className="bg-accent-orange text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-accent-orange-hover transition-colors shadow-xs"
+								className="bg-accent-orange text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
 							>
 								{item.label}
 							</a>
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
 							<a
 								key={item.label}
 								href={item.href}
-								className="text-white/80 hover:text-white font-medium text-sm transition-colors"
+								className="text-white/80 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 							>
 								{item.label}
 							</a>
@@ -59,7 +59,11 @@ export const Navbar: React.FC = () => {
 
 				{/* Center Logo */}
 				<div className="flex justify-center">
-					<a href="#home" className="hover:opacity-90 transition-opacity">
+					<a
+						href="#home"
+						className="hover:opacity-90 transition-opacity rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+						aria-label="JCREA Homepage"
+					>
 						<JcLogo />
 					</a>
 				</div>
@@ -70,7 +74,7 @@ export const Navbar: React.FC = () => {
 						<a
 							key={item.label}
 							href={item.href}
-							className="text-white/80 hover:text-white font-medium text-sm transition-colors"
+							className="text-white/80 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 						>
 							{item.label}
 						</a>
@@ -80,14 +84,19 @@ export const Navbar: React.FC = () => {
 
 			{/* Mobile Navbar Pill (Closed state) */}
 			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
-				<a href="#home">
+				<a
+					href="#home"
+					className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+					aria-label="JCREA Homepage"
+				>
 					<JcLogo />
 				</a>
 				<button
 					onClick={() => setMobileMenuOpen(true)}
-					className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors"
-					aria-label="Open navigation"
+					className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden cursor-pointer"
+					aria-label="Open navigation menu"
 					aria-expanded={mobileMenuOpen}
+					aria-controls="mobile-navigation-menu"
 				>
 					<svg
 						className="w-6 h-6"

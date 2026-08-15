@@ -16,7 +16,10 @@ export const HeroSection: React.FC = () => {
       {/* Main Title Container */}
       <div className="relative text-center max-w-212.5 mb-4 sm:mb-8 z-10">
         {/* Left Orange Scribble Accent (vector-2) placed bottom-left near Product Designer */}
-        <div className="absolute -bottom-2 -left-6 sm:-left-12 hidden xs:block pointer-events-none w-10 h-10 sm:w-14 sm:h-14">
+        <div
+          className="absolute -bottom-2 -left-6 sm:-left-12 hidden xs:block pointer-events-none w-10 h-10 sm:w-14 sm:h-14"
+          aria-hidden="true"
+        >
           <Image
             src="/vector-2.png"
             alt="Decorative orange scribble left"
