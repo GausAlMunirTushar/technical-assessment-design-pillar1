@@ -13,23 +13,24 @@ export const SliderIndicators: React.FC<SliderIndicatorsProps> = ({
 }) => {
   return (
     <div
-      className={`flex items-center justify-center gap-2 ${className}`}
+      className={`flex items-center justify-center gap-2.5 ${className}`}
       aria-label="Carousel pagination"
     >
       {Array.from({ length: total }).map((_, i) =>
         i === activeIndex ? (
           <span
             key={i}
-            className="w-8 h-2.5 bg-accent-orange rounded-full transition-all duration-300"
+            className="w-10 h-3 bg-accent-orange rounded-full transition-all duration-300 shadow-sm"
             aria-current="true"
           />
         ) : (
           <span
             key={i}
-            className="w-2.5 h-2.5 bg-white/40 rounded-full transition-all duration-300 hover:bg-white/60 cursor-pointer"
+            className="w-3 h-3 bg-white/80 rounded-full transition-all duration-300 hover:bg-white cursor-pointer"
           />
         )
       )}
     </div>
   );
 };
+

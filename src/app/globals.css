@@ -49,3 +49,27 @@ body {
   scrollbar-width: none;
 }
 
+/* Responsive cutout mask for ServiceCard inner mockup container */
+.service-card-cutout {
+  /* Default mobile (< 640px): button is 56px (radius 28px), cutout radius 39px */
+  -webkit-mask-image: radial-gradient(circle 39px at calc(100% - 28px) calc(100% - 28px), transparent 38.5px, black 39px);
+  mask-image: radial-gradient(circle 39px at calc(100% - 28px) calc(100% - 28px), transparent 38.5px, black 39px);
+}
+
+@media (min-width: 640px) {
+  .service-card-cutout {
+    /* SM screens (640px - 767px): button is 64px (radius 32px), cutout radius 44px */
+    -webkit-mask-image: radial-gradient(circle 44px at calc(100% - 32px) calc(100% - 32px), transparent 43.5px, black 44px);
+    mask-image: radial-gradient(circle 44px at calc(100% - 32px) calc(100% - 32px), transparent 43.5px, black 44px);
+  }
+}
+
+@media (min-width: 768px) {
+  .service-card-cutout {
+    /* MD+ screens (>= 768px): button is 68px (radius 34px), cutout radius 47px */
+    -webkit-mask-image: radial-gradient(circle 47px at calc(100% - 34px) calc(100% - 34px), transparent 46.5px, black 47px);
+    mask-image: radial-gradient(circle 47px at calc(100% - 34px) calc(100% - 34px), transparent 46.5px, black 47px);
+  }
+}
+
+
