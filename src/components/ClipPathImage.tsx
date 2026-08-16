@@ -14,7 +14,7 @@ export function ClipPathImage({
   return (
     <>
       {/* Hidden SVG with bottom-right smooth circular scoop clip path definition */}
-      <svg className="absolute -top-[999px] -left-[999px] w-0 h-0" aria-hidden="true">
+      <svg className="absolute -top-249.75 -left-249.75 w-0 h-0" aria-hidden="true">
         <defs>
           <clipPath id="clip-bottom-right-circle" clipPathUnits="objectBoundingBox">
             <path

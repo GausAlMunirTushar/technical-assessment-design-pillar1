@@ -39,7 +39,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
     >
       {/* Top Navbar Pill (Open State) */}
       <div
-        className="flex items-center justify-between w-full max-w-[345px] bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10"
+        className="flex items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10"
         onClick={(e) => e.stopPropagation()}
       >
         <a
@@ -74,7 +74,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Dropdown Card */}
       <div
         id="mobile-navigation-menu"
-        className="w-full max-w-[345px] bg-dark-surface text-white rounded-[28px] p-3.5 shadow-2xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
+        className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-3.5 shadow-2xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
