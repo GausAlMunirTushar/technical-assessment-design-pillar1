@@ -50,7 +50,7 @@ export const HeroSection: React.FC = () => {
 				<div className="col-span-1 md:col-span-6 flex justify-center items-end relative z-20">
 					<div className="relative w-85 xs:w-105 sm:w-140 md:w-170 lg:w-220 h-70 xs:h-87.5 sm:h-120 md:h-130 lg:h-145 flex justify-center items-end">
 						{/* Orange Arch Background Shape - Lower height than person so head pops out */}
-						<div className="absolute bottom-0 w-72.5 xs:w-90 sm:w-120 md:w-145 lg:w-192.5 h-43.75 xs:h-53.75 sm:h-72.5 md:h-88.75 lg:h-91.25 bg-[#FEB273] rounded-t-full shadow-xs" />
+						<div className="absolute bottom-0 w-72.5 xs:w-90 sm:w-120 md:w-145 lg:w-186.5 h-43.75 xs:h-53.75 sm:h-72.5 md:h-88.75 lg:h-85.25 bg-[#FEB273] rounded-t-full shadow-xs" />
 
 						{/* Jenny's Portrait - Enlarged image extending high above the arch and overlapping title text */}
 						<div className="relative z-10 w-full h-full flex justify-center items-end overflow-visible">
