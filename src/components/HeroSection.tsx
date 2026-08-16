@@ -33,46 +33,47 @@ export const HeroSection: React.FC = () => {
 				</h1>
 			</div>
 
-			{/* Hero Content Container: Side elements & Larger Center Portrait with Pop-Out Arch */}
-			<div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 items-end relative -mt-10 sm:-mt-18 md:-mt-28 lg:-mt-36">
+			{/* Mobile Side Elements Row (Directly below title on mobile screens) */}
+			<div className="flex md:hidden w-full items-start justify-between px-2 pt-4 pb-0 z-30 relative max-w-md">
+				<Testimonial />
+				<RatingExperience />
+			</div>
+
+			{/* Hero Content Container: Side elements (Desktop) & Center Portrait with Pop-Out Arch */}
+			<div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-12 items-end relative -mt-4 sm:-mt-12 md:-mt-28 lg:-mt-36">
 				{/* Left Side: Testimonial (Desktop) */}
-				<div className="hidden md:flex md:col-span-3 justify-start items-center pb-28 lg:pb-36 z-30 pl-2">
+				<div className="hidden md:flex md:col-span-3 justify-start items-center pb-24 lg:pb-95 z-30 pl-2">
 					<Testimonial />
 				</div>
 
-				{/* Center: Larger Hero Image with Orange Arch Backdrop (Pop-out effect) */}
+				{/* Center: Hero Image with Orange Arch Backdrop (Pop-out effect) */}
 				<div className="col-span-1 md:col-span-6 flex justify-center items-end relative z-20">
-					<div className="relative w-[360px] xs:w-[440px] sm:w-[560px] md:w-[680px] lg:w-[760px] h-[300px] xs:h-[360px] sm:h-[470px] md:h-[560px] lg:h-[630px] flex justify-center items-end">
+					<div className="relative w-[340px] xs:w-[420px] sm:w-[560px] md:w-[680px] lg:w-[780px] h-[280px] xs:h-[350px] sm:h-[480px] md:h-[580px] lg:h-[660px] flex justify-center items-end">
 						{/* Orange Arch Background Shape - Lower height than person so head pops out */}
-						<div className="absolute bottom-0 w-[300px] xs:w-[370px] sm:w-[480px] md:w-[580px] lg:w-[650px] h-[180px] xs:h-[220px] sm:h-[290px] md:h-[350px] lg:h-[400px] bg-accent-orange rounded-t-full shadow-xs" />
+						<div className="absolute bottom-0 w-[290px] xs:w-[360px] sm:w-[480px] md:w-[580px] lg:w-[670px] h-[175px] xs:h-[215px] sm:h-[290px] md:h-[355px] lg:h-[405px] bg-accent-orange rounded-t-full shadow-xs" />
 
 						{/* Jenny's Portrait - Enlarged image extending high above the arch and overlapping title text */}
-						<div className="relative z-10 w-full h-full flex justify-center items-end">
+						<div className="relative z-10 w-full h-full flex justify-center items-end overflow-visible">
 							<Image
 								src="/hero-person.png"
 								alt="Jenny - Product Designer"
-								width={953}
-								height={636}
+								width={1053}
+								height={736}
 								priority
-								className="object-contain object-bottom w-full h-full drop-shadow-md"
+								className="object-contain object-bottom w-full h-full drop-shadow-md scale-[1.25] sm:scale-[1.3] md:scale-[1.35] origin-bottom"
 							/>
 						</div>
 					</div>
 				</div>
 
 				{/* Right Side: Rating & Experience (Desktop) */}
-				<div className="hidden md:flex md:col-span-3 justify-end items-center pb-28 lg:pb-36 z-30 pr-2">
-					<RatingExperience />
-				</div>
-
-				{/* Mobile Side Elements Layout */}
-				<div className="flex md:hidden w-full items-center justify-between px-2 pt-4 pb-2 z-30 relative">
-					<Testimonial />
+				<div className="hidden md:flex md:col-span-3 justify-end items-center pb-24 lg:pb-95 z-30 pr-2">
 					<RatingExperience />
 				</div>
 			</div>
 		</section>
 	);
 };
+
 
 
