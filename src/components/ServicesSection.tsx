@@ -29,7 +29,7 @@ export const ServicesSection: React.FC = () => {
 			className="w-full bg-dark-bg text-white rounded-t-[40px] sm:rounded-t-[60px] pt-12 sm:pt-20 pb-16 px-4 sm:px-8 relative overflow-hidden border-t border-white/10"
 		>
 			{/* Layer 1: Dark Pattern Background Image */}
-			<div className="absolute inset-0 pointer-events-none opacity-50" aria-hidden="true">
+			<div className="absolute inset-0 pointer-events-none opacity-20" aria-hidden="true">
 				<Image
 					src="/services-pattern-bg.jpg"
 					alt=""
@@ -41,7 +41,7 @@ export const ServicesSection: React.FC = () => {
 			</div>
 
 			{/* Layer 2: Abstract Orange Fluid Overlay */}
-			<div className="absolute inset-0 pointer-events-none opacity-95 mix-blend-screen" aria-hidden="true">
+			<div className="absolute inset-0 pointer-events-none opacity-90 mix-blend-screen" aria-hidden="true">
 				<Image
 					src="/services-bg.png"
 					alt=""

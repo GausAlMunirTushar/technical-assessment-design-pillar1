@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { JcLogo } from "./icons/JcLogo";
 import { MobileMenu, NavItem } from "./MobileMenu";
+import Link from "next/link";
 
 const leftNavItems: NavItem[] = [
 	{ label: "Home", href: "#home", active: true },
@@ -28,69 +29,69 @@ export const Navbar: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="w-full max-w-360 mx-auto px-4 pt-6 pb-4 flex justify-center sticky top-0 z-40">
+		<header className="w-full max-w-360 mx-auto px-4 pt-9 pb-4 flex justify-center sticky top-0 z-40">
 			{/* Desktop Navbar */}
 			<nav
 				className="hidden md:flex items-center justify-between w-full max-w-287.5 bg-dark-surface text-white rounded-full p-2 shadow-lg border border-white/10"
 				aria-label="Desktop navigation"
 			>
 				{/* Left items */}
-				<div className="flex items-center gap-8 lg:gap-12 justify-start">
+				<div className="flex items-center gap-7 lg:gap-7 justify-start">
 					{leftNavItems.map((item) =>
 						item.active ? (
-							<a
+							<Link
 								key={item.label}
 								href={item.href}
-								className="bg-accent-orange text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
+								className="bg-accent-orange text-white px-10 py-4 rounded-full font-semibold text-md hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
 							>
 								{item.label}
-							</a>
+							</Link>
 						) : (
-							<a
+							<Link
 								key={item.label}
 								href={item.href}
-								className="text-white/90 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+								className="text-white hover:bg-slate-800 hover:text-white px-8 py-3 hover:rounded-full font-semibold text-md transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 							>
 								{item.label}
-							</a>
+							</Link>
 						)
 					)}
 				</div>
 
 				{/* Center Logo */}
 				<div className="flex justify-center">
-					<a
+					<Link
 						href="#home"
 						className="hover:opacity-90 transition-opacity rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
-						aria-label="JCREA Homepage"
+						aria-label="JCREA Logo"
 					>
 						<JcLogo />
-					</a>
+					</Link>
 				</div>
 
 				{/* Right items */}
-				<div className="flex items-center gap-8 lg:gap-12 justify-end pr-8">
+				<div className="flex items-center gap-8 lg:gap-20 justify-end pr-8">
 					{rightNavItems.map((item) => (
-						<a
+						<Link
 							key={item.label}
 							href={item.href}
-							className="text-white/90 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+							className="text-white hover:text-white font-semibold text-md transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 						>
 							{item.label}
-						</a>
+						</Link>
 					))}
 				</div>
 			</nav>
 
-			{/* Mobile Navbar Pill (Closed state) */}
+			{/* Mobile Navbar*/}
 			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
-				<a
+				<Link
 					href="#home"
 					className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 					aria-label="JCREA Homepage"
 				>
 					<JcLogo />
-				</a>
+				</Link>
 				<button
 					onClick={() => setMobileMenuOpen(true)}
 					className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden cursor-pointer"
@@ -114,7 +115,7 @@ export const Navbar: React.FC = () => {
 				</button>
 			</div>
 
-			{/* Mobile Menu Dropdown Modal */}
+			{/* Mobile Menu Dropdown */}
 			<MobileMenu
 				isOpen={mobileMenuOpen}
 				onClose={() => setMobileMenuOpen(false)}
