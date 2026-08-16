@@ -9,12 +9,12 @@ export const GreetingBadge: React.FC = () => {
         Hello!
       </div>
       {/* Orange accent scribble top-right using vector-1.png */}
-      <div className="absolute -top-3.5 -right-6 pointer-events-none w-8 h-8 sm:w-9 sm:h-9">
+      <div className="absolute -top-4 sm:-top-5 -right-7 sm:-right-8 pointer-events-none w-6 h-6 sm:w-7 sm:h-7">
         <Image
           src="/vector-1.png"
           alt="Decorative orange scribble"
-          width={36}
-          height={36}
+          width={28}
+          height={28}
           className="object-contain w-full h-full"
         />
       </div>
