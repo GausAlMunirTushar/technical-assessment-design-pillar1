@@ -28,20 +28,20 @@ export const Navbar: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="w-full max-w-360 mx-auto px-4 pt-6 pb-4 flex justify-center sticky top-0 z-40">
+		<header className="w-full max-w-[1440px] mx-auto px-4 pt-6 pb-4 flex justify-center sticky top-0 z-40">
 			{/* Desktop Navbar */}
 			<nav
-				className="hidden md:grid grid-cols-3 items-center w-full max-w-240 bg-dark-surface text-white rounded-full px-4 py-2.5 shadow-lg border border-white/10"
+				className="hidden md:flex items-center justify-between w-full max-w-[1150px] bg-dark-surface text-white rounded-full p-2 shadow-lg border border-white/10"
 				aria-label="Desktop navigation"
 			>
 				{/* Left items */}
-				<div className="flex items-center gap-6 justify-start pl-2">
+				<div className="flex items-center gap-8 lg:gap-12 justify-start">
 					{leftNavItems.map((item) =>
 						item.active ? (
 							<a
 								key={item.label}
 								href={item.href}
-								className="bg-accent-orange text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
+								className="bg-accent-orange text-white px-8 py-3 rounded-full font-medium text-sm hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
 							>
 								{item.label}
 							</a>
@@ -49,7 +49,7 @@ export const Navbar: React.FC = () => {
 							<a
 								key={item.label}
 								href={item.href}
-								className="text-white/80 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+								className="text-white/90 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 							>
 								{item.label}
 							</a>
@@ -69,12 +69,12 @@ export const Navbar: React.FC = () => {
 				</div>
 
 				{/* Right items */}
-				<div className="flex items-center gap-6 justify-end pr-2">
+				<div className="flex items-center gap-8 lg:gap-12 justify-end pr-8">
 					{rightNavItems.map((item) => (
 						<a
 							key={item.label}
 							href={item.href}
-							className="text-white/80 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+							className="text-white/90 hover:text-white font-medium text-sm transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 						>
 							{item.label}
 						</a>
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
 			</nav>
 
 			{/* Mobile Navbar Pill (Closed state) */}
-			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
+			<div className="flex md:hidden items-center justify-between w-full max-w-[345px] bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
 				<a
 					href="#home"
 					className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
