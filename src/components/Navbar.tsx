@@ -44,7 +44,7 @@ export const Navbar: React.FC = () => {
 							<Link
 								key={item.label}
 								href={item.href}
-								className="bg-accent-orange text-white px-10 py-4 rounded-full font-semibold text-md hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
+								className="bg-accent-orange text-white font-semibold px-10 py-4 rounded-full text-md hover:bg-accent-orange-hover transition-colors shadow-xs focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
 							>
 								{item.label}
 							</Link>

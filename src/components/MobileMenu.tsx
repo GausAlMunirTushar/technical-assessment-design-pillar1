@@ -90,7 +90,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   key={item.label}
                   href={item.href}
                   onClick={onClose}
-                  className="w-full bg-accent-orange text-white text-center py-2.5 rounded-full font-medium text-base hover:bg-accent-orange-hover transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
+                  className="w-full bg-accent-orange text-white font-medium text-center py-2.5 rounded-full text-base hover:bg-accent-orange-hover transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   {item.label}
                 </a>
