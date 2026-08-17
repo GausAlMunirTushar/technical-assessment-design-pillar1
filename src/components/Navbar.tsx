@@ -84,7 +84,7 @@ export const Navbar: React.FC = () => {
 			</nav>
 
 			{/* Mobile Navbar*/}
-			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10">
+			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 shadow-lg border border-white/10">
 				<Link
 					href="#home"
 					className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"

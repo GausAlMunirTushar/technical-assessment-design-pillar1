@@ -34,12 +34,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col items-center p-4 pt-6 gap-3"
+      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-9 gap-3"
       onClick={onClose}
     >
       {/* Top Navbar Pill (Open State) */}
       <div
-        className="flex items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-5 py-2.5 shadow-lg border border-white/10"
+        className="flex items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 border border-white/10"
         onClick={(e) => e.stopPropagation()}
       >
         <a
@@ -74,7 +74,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       {/* Dropdown Card */}
       <div
         id="mobile-navigation-menu"
-        className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-3.5 shadow-2xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
+        className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-2.5 shadow-xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
@@ -88,7 +88,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   key={item.label}
                   href={item.href}
                   onClick={onClose}
-                  className="w-full bg-accent-orange text-white text-center py-3.5 rounded-full font-medium text-base shadow-xs hover:bg-accent-orange-hover transition-colors"
+                  className="w-full bg-accent-orange text-white text-center py-2.5 rounded-full font-medium text-base hover:bg-accent-orange-hover transition-colors"
                 >
                   {item.label}
                 </a>
@@ -99,7 +99,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 key={item.label}
                 href={item.href}
                 onClick={onClose}
-                className="w-full text-center py-3 text-white/90 font-medium text-base hover:text-white transition-colors rounded-full"
+                className="w-full text-center py-2.5 text-white/90 font-medium text-base hover:text-white transition-colors rounded-full"
               >
                 {item.label}
               </a>
