@@ -55,6 +55,7 @@ export const HeroSection: React.FC = () => {
 								width={1053}
 								height={736}
 								priority
+								sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 520px"
 								className="object-contain object-bottom w-full h-full drop-shadow-md scale-[1.25] sm:scale-[1.3] md:scale-[1.35] origin-bottom"
 							/>
 						</div>

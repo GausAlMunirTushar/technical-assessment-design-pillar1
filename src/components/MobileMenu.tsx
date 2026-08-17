@@ -54,7 +54,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         </a>
         <button
           onClick={onClose}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+          className="w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
           aria-label="Close navigation menu"
         >
           <svg

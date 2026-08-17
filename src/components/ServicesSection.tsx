@@ -57,7 +57,7 @@ export const ServicesSection: React.FC = () => {
 				<div className="flex px-6 pb-6 flex-col md:flex-row md:items-end justify-between gap-4">
 					<h2
 						id="services-heading"
-						className="text-3xl sm:text-2xl md:text-5xl font-medium tracking-tight"
+						className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"
 					>
 						My <span className="text-accent-orange">Services</span>
 					</h2>
