@@ -9,7 +9,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://jcrea-portfolio.example.com"),
+	metadataBase: new URL("https://pillar1-design.gausalmunir.site"),
 	title: {
 		default: "Jenny — Product Designer Portfolio",
 		template: "%s | Jenny Design",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 		"Landing Page Design",
 		"JCREA",
 	],
-	authors: [{ name: "Jenny", url: "https://jcrea-portfolio.example.com" }],
+	authors: [{ name: "Jenny", url: "https://pillar1-design.gausalmunir.site" }],
 	creator: "Jenny",
 	publisher: "JCREA",
 	alternates: {
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 		title: "Jenny — Product Designer Portfolio",
 		description:
 			"Jenny's exceptional product design ensures website success. Specializing in UI/UX design, web design, and high-converting landing pages.",
-		url: "https://jcrea-portfolio.example.com",
+		url: "https://pillar1-design.gausalmunir.site",
 		siteName: "Jenny Product Designer Portfolio",
 		locale: "en_US",
 		type: "website",
@@ -72,7 +72,7 @@ const jsonLdData = {
 	"@graph": [
 		{
 			"@type": "Person",
-			"@id": "https://jcrea-portfolio.example.com/#person",
+			"@id": "https://pillar1-design.gausalmunir.site/#person",
 			name: "Jenny",
 			jobTitle: "Product Designer",
 			description:
@@ -86,11 +86,11 @@ const jsonLdData = {
 		},
 		{
 			"@type": "WebSite",
-			"@id": "https://jcrea-portfolio.example.com/#website",
-			url: "https://jcrea-portfolio.example.com",
+			"@id": "https://pillar1-design.gausalmunir.site/#website",
+			url: "https://pillar1-design.gausalmunir.site",
 			name: "Jenny — Product Designer Portfolio",
 			publisher: {
-				"@id": "https://jcrea-portfolio.example.com/#person",
+				"@id": "https://pillar1-design.gausalmunir.site/#person",
 			},
 		},
 	],
