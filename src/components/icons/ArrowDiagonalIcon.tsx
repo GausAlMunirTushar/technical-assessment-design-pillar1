@@ -4,6 +4,9 @@ interface ArrowDiagonalIconProps {
   className?: string;
 }
 
+/**
+ * Top-right diagonal arrow icon used for CTA buttons and interactive links.
+ */
 export const ArrowDiagonalIcon: React.FC<ArrowDiagonalIconProps> = ({
   className = "",
 }) => {

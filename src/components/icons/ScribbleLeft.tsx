@@ -4,6 +4,9 @@ interface ScribbleProps {
   className?: string;
 }
 
+/**
+ * Decorative vector scribble element placed on hero title text.
+ */
 export const ScribbleLeft: React.FC<ScribbleProps> = ({ className = "" }) => {
   return (
     <svg

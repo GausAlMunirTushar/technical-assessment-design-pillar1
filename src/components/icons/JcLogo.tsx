@@ -5,6 +5,9 @@ interface JcLogoProps {
   className?: string;
 }
 
+/**
+ * JCREA brand monogram logo component with text branding.
+ */
 export const JcLogo: React.FC<JcLogoProps> = ({ className = "" }) => {
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>

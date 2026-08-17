@@ -5,6 +5,9 @@ interface StarRatingProps {
   className?: string;
 }
 
+/**
+ * Accessible 5-star rating graphic component for social proof indicators.
+ */
 export const StarRating: React.FC<StarRatingProps> = ({
   count = 5,
   className = "",

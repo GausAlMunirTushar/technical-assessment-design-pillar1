@@ -25,17 +25,19 @@ const mobileNavItems: NavItem[] = [
 	{ label: "Contact", href: "#contact" },
 ];
 
+/**
+ * Main application navigation header supporting sticky positioning,
+ * desktop split navigation links, and mobile menu overlay toggle.
+ */
 export const Navbar: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
 		<header className="w-full max-w-360 mx-auto px-4 pt-9 pb-4 flex justify-center sticky top-0 z-40">
-			{/* Desktop Navbar */}
 			<nav
 				className="hidden md:flex items-center justify-between w-full max-w-287.5 bg-dark-surface text-white rounded-full p-2 shadow-lg border border-white/10"
 				aria-label="Desktop navigation"
 			>
-				{/* Left items */}
 				<div className="flex items-center gap-7 lg:gap-7 justify-start">
 					{leftNavItems.map((item) =>
 						item.active ? (
@@ -58,7 +60,6 @@ export const Navbar: React.FC = () => {
 					)}
 				</div>
 
-				{/* Center Logo */}
 				<div className="flex justify-center">
 					<Link
 						href="#home"
@@ -69,7 +70,6 @@ export const Navbar: React.FC = () => {
 					</Link>
 				</div>
 
-				{/* Right items */}
 				<div className="flex items-center gap-8 lg:gap-20 justify-end pr-8">
 					{rightNavItems.map((item) => (
 						<Link
@@ -83,7 +83,6 @@ export const Navbar: React.FC = () => {
 				</div>
 			</nav>
 
-			{/* Mobile Navbar*/}
 			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 shadow-lg border border-white/10">
 				<Link
 					href="#home"
@@ -104,6 +103,7 @@ export const Navbar: React.FC = () => {
 						fill="none"
 						stroke="currentColor"
 						viewBox="0 0 24 24"
+						aria-hidden="true"
 					>
 						<path
 							strokeLinecap="round"
@@ -115,7 +115,6 @@ export const Navbar: React.FC = () => {
 				</button>
 			</div>
 
-			{/* Mobile Menu Dropdown */}
 			<MobileMenu
 				isOpen={mobileMenuOpen}
 				onClose={() => setMobileMenuOpen(false)}

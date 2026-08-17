@@ -4,6 +4,9 @@ interface ScribbleProps {
   className?: string;
 }
 
+/**
+ * Decorative vector scribble top element used in hero accent graphics.
+ */
 export const ScribbleTop: React.FC<ScribbleProps> = ({ className = "" }) => {
   return (
     <svg

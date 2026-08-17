@@ -4,6 +4,9 @@ interface QuoteIconProps {
   className?: string;
 }
 
+/**
+ * Decorative double quotation mark icon used in testimonial sections.
+ */
 export const QuoteIcon: React.FC<QuoteIconProps> = ({ className = "" }) => {
   return (
     <svg

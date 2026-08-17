@@ -2,11 +2,18 @@ import React, { useId } from "react";
 import { ArrowDiagonalIcon } from "./icons/ArrowDiagonalIcon";
 
 export interface ServiceCardProps {
+	/** Title of the offered service */
 	title: string;
+	/** Image path/URL for the service mockup panel */
 	imageSrc: string;
+	/** Accessible alt text describing the service mockup graphic */
 	altText: string;
 }
 
+/**
+ * Service card component with stacked card layers, responsive glassmorphism border,
+ * SVG cutout masking, and interactive action button.
+ */
 export const ServiceCard: React.FC<ServiceCardProps> = ({
 	title,
 	imageSrc,

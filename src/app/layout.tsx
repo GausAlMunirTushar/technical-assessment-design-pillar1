@@ -93,6 +93,15 @@ const jsonLdData = {
 				"@id": "https://pillar1-design.gausalmunir.site/#person",
 			},
 		},
+		{
+			"@type": "Service",
+			name: "UI/UX Design & Web Product Design",
+			provider: {
+				"@id": "https://pillar1-design.gausalmunir.site/#person",
+			},
+			serviceType: "Product Design",
+			areaServed: "Worldwide",
+		},
 	],
 };
 

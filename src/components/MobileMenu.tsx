@@ -15,6 +15,9 @@ interface MobileMenuProps {
   items: NavItem[];
 }
 
+/**
+ * Accessible mobile navigation modal drawer with keyboard escape listener and focus trap support.
+ */
 export const MobileMenu: React.FC<MobileMenuProps> = ({
   isOpen,
   onClose,
@@ -37,7 +40,6 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
       className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-9 gap-3"
       onClick={onClose}
     >
-      {/* Top Navbar Pill (Open State) */}
       <div
         className="flex items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 border border-white/10"
         onClick={(e) => e.stopPropagation()}
@@ -52,7 +54,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         </a>
         <button
           onClick={onClose}
-          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer"
+          className="w-9 h-9 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
           aria-label="Close navigation menu"
         >
           <svg
@@ -60,6 +62,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            aria-hidden="true"
           >
             <path
               strokeLinecap="round"
@@ -71,16 +74,15 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
         </button>
       </div>
 
-      {/* Dropdown Card */}
       <div
         id="mobile-navigation-menu"
         className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-2.5 shadow-xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"
-        aria-label="Navigation menu"
+        aria-label="Mobile navigation menu"
       >
-        <nav className="flex flex-col gap-1 w-full" aria-label="Mobile navigation">
+        <nav className="flex flex-col gap-1 w-full" aria-label="Mobile navigation links">
           {items.map((item) => {
             if (item.active) {
               return (
@@ -88,7 +90,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                   key={item.label}
                   href={item.href}
                   onClick={onClose}
-                  className="w-full bg-accent-orange text-white text-center py-2.5 rounded-full font-medium text-base hover:bg-accent-orange-hover transition-colors"
+                  className="w-full bg-accent-orange text-white text-center py-2.5 rounded-full font-medium text-base hover:bg-accent-orange-hover transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   {item.label}
                 </a>
@@ -99,7 +101,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
                 key={item.label}
                 href={item.href}
                 onClick={onClose}
-                className="w-full text-center py-2.5 text-white/90 font-medium text-base hover:text-white transition-colors rounded-full"
+                className="w-full text-center py-2.5 text-white/90 font-medium text-base hover:text-white transition-colors rounded-full focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
               >
                 {item.label}
               </a>
