@@ -19,7 +19,7 @@ export const JcLogo: React.FC<JcLogoProps> = ({ className = "" }) => {
         className="w-9 h-9 shrink-0"
         priority
       />
-      <span className="text-white font-extrabold tracking-wider text-base uppercase font-sans">
+      <span className="text-white font-extrabold tracking-wider text-2xl uppercase font-sans">
         JCREA
       </span>
     </div>
