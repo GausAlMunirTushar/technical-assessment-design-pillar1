@@ -1,7 +1,11 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { ServiceCard, ServiceCardProps } from "./ServiceCard";
 import { SliderIndicators } from "./SliderIndicators";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
 
 const servicesData: ServiceCardProps[] = [
 	{
@@ -26,6 +30,8 @@ const servicesData: ServiceCardProps[] = [
  * on desktop screens and a smooth snap-slider on mobile devices.
  */
 export const ServicesSection: React.FC = () => {
+	const [activeIndex, setActiveIndex] = useState(0);
+
 	return (
 		<section
 			id="services"
@@ -57,7 +63,7 @@ export const ServicesSection: React.FC = () => {
 				<div className="flex px-6 pb-6 flex-col md:flex-row md:items-end justify-between gap-4">
 					<h2
 						id="services-heading"
-						className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight"
+						className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight"
 					>
 						My <span className="text-accent-orange">Services</span>
 					</h2>
@@ -73,15 +79,24 @@ export const ServicesSection: React.FC = () => {
 						))}
 					</div>
 
-					<div className="flex md:hidden overflow-x-auto snap-x snap-mandatory gap-4 pb-4 no-scrollbar -mx-4 px-4">
-						{servicesData.map((service, index) => (
-							<ServiceCard key={index} {...service} />
-						))}
+					<div className="block md:hidden pb-4 -mx-4 px-4">
+						<Swiper
+							spaceBetween={16}
+							slidesPerView="auto"
+							onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
+							className="overflow-visible!"
+						>
+							{servicesData.map((service, index) => (
+								<SwiperSlide key={index} className="w-auto!">
+									<ServiceCard {...service} />
+								</SwiperSlide>
+							))}
+						</Swiper>
 					</div>
 				</div>
 
 				<div className="pt-2">
-					<SliderIndicators total={3} activeIndex={0} />
+					<SliderIndicators total={3} activeIndex={activeIndex} />
 				</div>
 			</div>
 		</section>

@@ -35,7 +35,7 @@ export const Navbar: React.FC = () => {
 	return (
 		<header className="w-full max-w-360 mx-auto px-4 pt-9 pb-4 flex justify-center sticky top-0 z-40">
 			<nav
-				className="hidden md:flex items-center justify-between w-full max-w-287.5 bg-dark-surface text-white rounded-full p-2 shadow-lg border border-white/10"
+				className="hidden md:flex items-center justify-between w-full max-w-287.5 bg-dark-surface text-white rounded-full p-2 border border-white/10"
 				aria-label="Desktop navigation"
 			>
 				<div className="flex items-center gap-7 lg:gap-7 justify-start">
@@ -75,7 +75,7 @@ export const Navbar: React.FC = () => {
 						<Link
 							key={item.label}
 							href={item.href}
-							className="text-white hover:text-white font-extrabold text-md transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+							className="text-white hover:text-white font-semibold text-md transition-colors rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
 						>
 							{item.label}
 						</Link>
