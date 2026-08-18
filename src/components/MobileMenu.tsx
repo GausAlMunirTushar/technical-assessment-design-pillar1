@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
+import Link from "next/link";
 
 export interface NavItem {
   label: string;
@@ -36,7 +37,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-[96px] gap-3"
+      className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-24 gap-3"
       onClick={onClose}
     >
       <div
@@ -51,25 +52,25 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
           {items.map((item) => {
             if (item.active) {
               return (
-                <a
+                <Link
                   key={item.label}
                   href={item.href}
                   onClick={onClose}
-                  className="w-full bg-accent-orange text-white font-medium text-center py-2.5 rounded-full text-base hover:bg-accent-orange-hover transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
+                  className="w-full bg-accent-orange text-white font-medium text-center py-2.5 px-4 rounded-full text-base hover:bg-accent-orange-hover transition-colors focus-visible:ring-2 focus-visible:ring-white focus-visible:outline-hidden"
                 >
                   {item.label}
-                </a>
+                </Link>
               );
             }
             return (
-              <a
+              <Link
                 key={item.label}
                 href={item.href}
                 onClick={onClose}
-                className="w-full text-center py-2.5 text-white/90 font-medium text-base hover:text-white transition-colors rounded-full focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
+                className="w-full text-center py-2.5 px-4 text-white/90 font-medium text-base hover:text-white hover:bg-white/5 transition-colors rounded-full focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
               >
                 {item.label}
-              </a>
+              </Link>
             );
           })}
         </nav>
@@ -77,4 +78,5 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
     </div>
   );
 };
+
 
