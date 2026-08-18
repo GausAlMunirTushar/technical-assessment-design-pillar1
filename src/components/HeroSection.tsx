@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
 				</h1>
 			</div>
 
-			<div className="flex md:hidden w-full items-start justify-between px-2 pt-4 pb-0 z-30 relative max-w-md">
+			<div className="flex md:hidden w-full items-start justify-between px-2 pt-12 pb-0 z-30 relative max-w-md">
 				<Testimonial />
 				<RatingExperience />
 			</div>

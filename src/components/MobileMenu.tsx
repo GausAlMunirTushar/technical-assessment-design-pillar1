@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { JcLogo } from "./icons/JcLogo";
 
 export interface NavItem {
   label: string;
@@ -37,46 +36,12 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-9 gap-3"
+      className="fixed inset-0 z-40 bg-black/60 backdrop-blur-xs flex flex-col items-center px-4 pt-[96px] gap-3"
       onClick={onClose}
     >
       <div
-        className="flex items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 border border-white/10"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <a
-          href="#home"
-          onClick={onClose}
-          className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
-          aria-label="JCREA Homepage"
-        >
-          <JcLogo />
-        </a>
-        <button
-          onClick={onClose}
-          className="w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
-          aria-label="Close navigation menu"
-        >
-          <svg
-            className="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2.5}
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-        </button>
-      </div>
-
-      <div
         id="mobile-navigation-menu"
-        className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-2.5 shadow-xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150"
+        className="w-full max-w-86.25 bg-dark-surface text-white rounded-[28px] p-2.5 shadow-xl flex flex-col border border-white/10 animate-in fade-in zoom-in-95 duration-150 mt-1"
         onClick={(e) => e.stopPropagation()}
         role="dialog"
         aria-modal="true"

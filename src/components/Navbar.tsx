@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
 	return (
-		<header className="w-full max-w-360 mx-auto px-4 pt-9 pb-4 flex justify-center sticky top-0 z-40">
+		<header className="w-full max-w-360 mx-auto px-4 pt-9 pb-4 flex flex-col items-center sticky top-0 z-50">
 			<nav
 				className="hidden md:flex items-center justify-between w-full max-w-287.5 bg-dark-surface text-white rounded-full p-2 border border-white/10"
 				aria-label="Desktop navigation"
@@ -83,7 +83,7 @@ export const Navbar: React.FC = () => {
 				</div>
 			</nav>
 
-			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 shadow-lg border border-white/10">
+			<div className="flex md:hidden items-center justify-between w-full max-w-86.25 bg-dark-surface text-white rounded-full px-4 py-2 shadow-lg border border-white/10 relative z-50">
 				<Link
 					href="#home"
 					className="rounded-md focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden"
@@ -92,26 +92,43 @@ export const Navbar: React.FC = () => {
 					<JcLogo />
 				</Link>
 				<button
-					onClick={() => setMobileMenuOpen(true)}
+					onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
 					className="w-11 h-11 rounded-full flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-2 focus-visible:ring-accent-orange focus-visible:outline-hidden cursor-pointer"
-					aria-label="Open navigation menu"
+					aria-label={mobileMenuOpen ? "Close navigation menu" : "Open navigation menu"}
 					aria-expanded={mobileMenuOpen}
 					aria-controls="mobile-navigation-menu"
 				>
-					<svg
-						className="w-6 h-6"
-						fill="none"
-						stroke="currentColor"
-						viewBox="0 0 24 24"
-						aria-hidden="true"
-					>
-						<path
-							strokeLinecap="round"
-							strokeLinejoin="round"
-							strokeWidth={2}
-							d="M4 6h16M4 12h16M4 18h16"
-						/>
-					</svg>
+					{mobileMenuOpen ? (
+						<svg
+							className="w-5 h-5"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2.5}
+								d="M6 18L18 6M6 6l12 12"
+							/>
+						</svg>
+					) : (
+						<svg
+							className="w-6 h-6"
+							fill="none"
+							stroke="currentColor"
+							viewBox="0 0 24 24"
+							aria-hidden="true"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						</svg>
+					)}
 				</button>
 			</div>
 

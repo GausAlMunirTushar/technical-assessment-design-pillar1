@@ -60,7 +60,7 @@ export const ServicesSection: React.FC = () => {
 			</div>
 
 			<div className="relative z-10 max-w-300 mx-auto flex flex-col gap-10">
-				<div className="flex px-6 pb-6 flex-col md:flex-row md:items-end justify-between gap-4">
+				<div className="flex px-2 sm:px-6 pb-6 flex-col md:flex-row md:items-end justify-between gap-4">
 					<h2
 						id="services-heading"
 						className="text-3xl sm:text-4xl md:text-5xl font-medium tracking-tight"
@@ -68,11 +68,11 @@ export const ServicesSection: React.FC = () => {
 						My <span className="text-accent-orange">Services</span>
 					</h2>
 					<p className="max-w-115 text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-normal">
-						Crafting intuitive digital experiences, engaging user interfaces, and high-converting landing pages tailored to scale your brand.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lacus nunc, posuere in justo vulputate, bibendum sodales
 					</p>
 				</div>
 
-				<div className="w-full px-6">
+				<div className="w-full px-2 sm:px-6">
 					<div className="hidden md:grid grid-cols-3 gap-6">
 						{servicesData.map((service, index) => (
 							<ServiceCard key={index} {...service} />
