@@ -1,20 +1,16 @@
-
-
 # Technical Assessment — Pillar 1: Design Implementation
 
-Pixel-accurate, fully responsive Next.js application converting Figma design specifications into a state-of-the-art interface. Built as part of the **React Frontend Engineer (Junior – Mid Level)** UI challenge (Pillar 1: 50% Evaluation Weight).
+Pixel-accurate, fully responsive Next.js application converting Figma design specifications into a state-of-the-art interface. Built as part of the **React Frontend Engineer (Junior – Mid Level)** UI challenge
 
 ---
 
-## 🚀 Live Demo & Repository Links
+## Live Demo
 
 - **Live Demo**: [https://pillar1-design.gausalmunir.site](https://pillar1-design.gausalmunir.site)
-- **Pillar 1 (Design)**: `technical-assessment-design-pillar1`
-- **Pillar 2 (Functional)**: `technical-assessment-functional-pillar2`
 
 ---
 
-## 🛠️ Tech Stack & Key Requirements
+## Tech Stack & Key Requirements
 
 | Domain | Technology / Tool | Specification |
 |---|---|---|
@@ -27,7 +23,7 @@ Pixel-accurate, fully responsive Next.js application converting Figma design spe
 
 ---
 
-## 💻 Getting Started & Local Setup
+## Getting Started & Local Setup
 
 ### Prerequisites
 
@@ -61,7 +57,7 @@ Ensure you have Node.js 18.x or later installed.
 
 ---
 
-## 🎨 Component Architecture & Design System
+## Component Architecture & Design System
 
 The application is structured into modular, accessible, and reusable React components:
 
@@ -86,7 +82,7 @@ src/
 
 ---
 
-## 📐 Figma Accuracy & Technical Highlights
+## Figma Accuracy & Technical Highlights
 
 ### 1. Responsive Breakpoint Optimization
 - Designed for **Desktop (1440px)** and **Mobile (375px)** design frames with smooth fluid scaling across intermediate screen sizes (`sm`, `md`, `lg`, `xl`).
@@ -105,7 +101,7 @@ src/
 
 ---
 
-## ♿ Accessibility & SEO
+## Accessibility & SEO
 
 - **Semantic Landmark Tags**: Built with `<header>`, `<nav>`, `<main>`, `<section>`, and `<h1-h3>` hierarchy.
 - **Keyboard Navigation**: Focus indicators (`focus-visible:ring-2 focus-visible:ring-accent-orange`) on all interactive controls and links.
@@ -115,7 +111,7 @@ src/
 
 ---
 
-## 🔍 Bonus Features & Extra Polish
+## Bonus Features & Extra Polish
 
 1. **Accessibility Standards**: Keyboard bypass links, standard ARIA labels (`aria-expanded`, `aria-controls`, `aria-labelledby`).
 2. **Performance Optimizations**: Native Next.js `Image` with optimal sizing (`sizes="..."`, `priority` loading for above-the-fold assets).
@@ -123,13 +119,17 @@ src/
 
 ---
 
-## 📝 Known Limitations
+## Lighthouse Performance Report
+
+| Desktop | Mobile |
+| :---: | :---: |
+| ![Desktop Performance](./docs/desktop.png) | ![Mobile Performance](./docs/mobile.png) |
+
+---
+
+## Known Limitations
 
 - **Navigation Links**: Header items (`#home`, `#about`, `#services`, `#resume`, `#project`, `#contact`) link to page anchor IDs; additional secondary sub-pages (e.g. detailed resume/projects) are beyond the UI challenge scope.
 - **Slider Automation**: Mobile card slider supports manual swipe and indicator dots; full touch swipe drag sync to indicator dot state can be extended using Swiper/Embla if required in production.
 
 ---
-
-## 📄 License & Attribution
-
-Submitted for **React Frontend Engineer Technical Assessment 2026**. Confidential and proprietary.
